@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.nav-links li a:hover {
+    background: #444;
+}
+
+/* Hidden checkbox */
+.menu-btn {
+    display: none;
+}
+
+/* Hamburger icon */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ------ Responsive ------- */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 200px;
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-links li a {
+        padding: 15px;
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-btn:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Show hamburger on mobile */
+    .menu-icon {
+        display: block;
+    }
+}
